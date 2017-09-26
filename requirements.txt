@@ -1,6 +1,0 @@
-async-request==1.2.0
-discord.js==11.1.0
-discord.js-commando==0.8.5
-sqlite==2.3.0"
-feedparser==5.2.1
-requests==2.7.0
