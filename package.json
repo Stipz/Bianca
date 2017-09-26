@@ -2,7 +2,7 @@
   "name": "weebbot",
   "description": "Discord bot for PSO2.",
   "main": "bot.js",
-  "scripts" : { "start": "node bot.js" }.
+  "scripts" : { "start": "node bot.js" },
   "dependencies": {
     "async-request": "^1.2.0",
     "discord.js": "^11.1.0",
