@@ -1,8 +1,7 @@
 {
   "name": "Xierra-bot",
-  "description": "Discord bot for PSO2.",
-  "main": "bot.js",
-    "dependencies": {
+  "description": "Discord bot for GIGAS.",
+  "dependencies": {
     "async-request": "^1.2.0",
     "discord.js": "^11.1.0",
     "discord.js-commando": "^0.8.5",
