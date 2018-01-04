@@ -144,7 +144,7 @@ class PSO2:
             await self.bot.say("EQ alerts are not enabled on this channel.")
 
     @commands.command(pass_context=True)
-    async def item(self, ctx, *, itemname : str):
+    async def price(self, ctx, *, itemname : str):
         """Looks up JP name of an item."""
 
         async with aiohttp.ClientSession() as session:
@@ -158,7 +158,17 @@ class PSO2:
                     if len(js) >= 1 and len(js) <= 10:
                         for result in js:
                             if result["EnName"]:
-                                iteminfo.append("``EN Name:`` {} **|** ``JP Name:`` {}".format(result["EnName"], result["JpName"]))
+                                iteminfo.append("``EN Name:`` {} | ``JP Name:`` {}\n\n``SHIP01:`` {}\n``SHIP02:`` {}\n``SHIP03:`` {}\n``SHIP04:`` {}\n``SHIP05:`` {}\n``SHIP06:`` {}\n``SHIP07:`` {}\n``SHIP08:`` {}\n``SHIP09:`` {}\n``SHIP10:`` {}\n".format(result["EnName"], result["JpName"]
+                                                                          , result["PriceInfo"][0]["Price"]
+                                                                          , result["PriceInfo"][1]["Price"]
+                                                                          , result["PriceInfo"][2]["Price"]
+                                                                          , result["PriceInfo"][3]["Price"]
+                                                                          , result["PriceInfo"][4]["Price"]
+                                                                          , result["PriceInfo"][5]["Price"]
+                                                                          , result["PriceInfo"][6]["Price"]
+                                                                          , result["PriceInfo"][7]["Price"]
+                                                                          , result["PriceInfo"][8]["Price"]
+                                                                          , result["PriceInfo"][9]["Price"]))
                         string = "\n".join(iteminfo)
                         message = "{}\n{}".format(string, ctx.message.author.mention)
                         await self.bot.say(message)
