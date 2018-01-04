@@ -158,8 +158,8 @@ class PSO2:
                     if len(js) >= 1 and len(js) <= 10:
                         for result in js:
                             if result["EnName"]:
-                                iteminfo.append("``EN Name:`` {} | ``JP Name:`` {}\n\n``SHIP01:`` {}\n``SHIP02:`` {}\n``SHIP03:`` {}\n``SHIP04:`` {}\n``SHIP05:`` {}\n``SHIP06:`` {}\n``SHIP07:`` {}\n``SHIP08:`` {}\n``SHIP09:`` {}\n``SHIP10:`` {}\n".format(result["EnName"], result["JpName"]
-                                                                          , result["PriceInfo"][0]["Price"]
+                                iteminfo.append("``EN Name:`` {} | ``JP Name:`` {:,.0f}\n\n``SHIP01:`` {:,.0f}\n``SHIP02:`` {:,.0f}\n``SHIP03:`` {:,.0f}\n``SHIP04:`` {:,.0f}\n``SHIP05:`` {:,.0f}\n``SHIP06:`` {:,.0f}\n``SHIP07:`` {:,.0f}\n``SHIP08:`` {:,.0f}\n``SHIP09:`` {:,.0f}\n``SHIP10:`` {:,.0f}\n".format(result["EnName"], result["JpName"]
+"""                                                                          , result["PriceInfo"][0]["Price"]
                                                                           , result["PriceInfo"][1]["Price"]
                                                                           , result["PriceInfo"][2]["Price"]
                                                                           , result["PriceInfo"][3]["Price"]
@@ -169,7 +169,7 @@ class PSO2:
                                                                           , result["PriceInfo"][7]["Price"]
                                                                           , result["PriceInfo"][8]["Price"]
                                                                           , result["PriceInfo"][9]["Price"]))
-                        string = "\n".join(iteminfo)
+"""                     string = "\n".join(iteminfo)
                         message = "{}\n{}".format(string, ctx.message.author.mention)
                         await self.bot.say(message)
 
